@@ -1,0 +1,4 @@
+npm init -y
+
+npm install prompt-sync
+touch main.js
