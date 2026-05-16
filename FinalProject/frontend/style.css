@@ -1,0 +1,83 @@
+/* 全局暗黑背景与发光线条 */
+body {
+    background-color: #12141c !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* 工业级 KPI 数字卡片：增加科技感边框投影 */
+.kpi-card {
+    background: rgba(30, 34, 45, 0.7);
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.1);
+    transition: all 0.3s ease;
+}
+.kpi-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(0, 242, 254, 0.25);
+}
+
+/* 工件动态追踪卡片 */
+.product-card {
+    background-color: #1e222d !important;
+    border: 1px solid #2d3344 !important;
+    border-left: 5px solid #6c757d !important; /* 默认灰色 */
+    transition: all 0.3s ease;
+}
+
+/* 根据产品检测结果动态改变卡片左边框颜色 */
+.border-qualified {
+    border-left: 5px solid #198754 !important; /* 绿色：合格品 */
+    box-shadow: 0 0 10px rgba(25, 135, 84, 0.15);
+}
+.border-defective {
+    border-left: 5px solid #dc3545 !important; /* 红色：缺陷品 */
+    box-shadow: 0 0 10px rgba(220, 53, 69, 0.15);
+}
+
+/* 🚥 工位状态闪烁呼吸灯效果 */
+.status-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+.dot-pending { background-color: #6c757d; } /* 灰色：未开始 */
+.dot-completed { background-color: #198754; } /* 绿色：已完成 */
+
+/* 🟡 黄色呼吸灯：代表当前工位正在加工/检测中，具有闪烁动画 */
+.dot-processing {
+    background-color: #ffc107;
+    animation: blinker 1.5s linear infinite;
+}
+@keyframes blinker {
+    50% { opacity: 0.3; }
+}
+
+/* 调试控制台按钮微调 */
+.btn-simulate {
+    font-size: 0.75rem;
+    padding: 2px 6px;
+}
+
+
+/* 针对暗黑模式优化的 KPI 文字颜色强排 */
+.kpi-card .text-muted, .kpi-card .text-white-50 {
+    color: #a0aec0 !important; /* 调整小字标题为柔和的浅灰色 */
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+}
+
+#kpiTotal {
+    color: #00f2fe !important; /* 强行把总数改成科技感极强的荧光青色 */
+    text-shadow: 0 0 10px rgba(0, 242, 254, 0.5); /* 增加发光特效 */
+}
+
+#kpiFpy {
+    color: #4cd137 !important; /* 强行把直通率改成鲜艳的荧光绿色 */
+    text-shadow: 0 0 10px rgba(76, 209, 55, 0.5);
+}
+
+#kpiDefects {
+    color: #ff7675 !important; /* 强行把缺陷数改成警示性的亮红色 */
+    text-shadow: 0 0 10px rgba(255, 118, 117, 0.5);
+}

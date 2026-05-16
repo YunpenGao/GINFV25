@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MES Industry 4.0 Digital Twin Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-dark text-light">
+
+    <nav class="navbar navbar-dark bg-secondary border-bottom border-info px-4 mb-4">
+        <span class="navbar-brand mb-0 h1 text-info">⚙️ MES Digital Twin Control Panel (Industry 4.0 Center)</span>
+        <div class="text-end">
+            <span class="badge bg-success" id="connectionStatus">● SYSTEM LINKED</span>
+        </div>
+    </nav>
+
+    <div class="container-fluid px-4">
+        <div class="row g-3 mb-4">
+            <div class="col-md-3">
+                <div class="kpi-card p-3 border border-primary bg-opacity-10 bg-primary rounded">
+                    <div class="text-muted small text-uppercase">Total Inputs Online</div>
+                    <div class="h2 text-primary font-monospace" id="kpiTotal">0</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="kpi-card p-3 border border-success bg-opacity-10 bg-success rounded">
+                    <div class="text-muted small text-uppercase">First Pass Yield (FPY)</div>
+                    <div class="h2 text-success font-monospace" id="kpiFpy">0.0%</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="kpi-card p-3 border border-warning bg-opacity-10 bg-warning rounded">
+                    <div class="text-muted small text-uppercase">Camera Defect Count</div>
+                    <div class="h2 text-warning font-monospace" id="kpiDefects">0</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="kpi-card p-3 border border-info bg-opacity-10 bg-info rounded">
+                    <div class="text-muted small text-uppercase">Unity Sync Status</div>
+                    <div class="h2 text-info font-monospace">100% (Sim)</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-4">
+                <div class="card p-4 text-light h-100 shadow" style="background-color: #1e222d !important; border: 1px solid #2d3344;">
+                    <h4 class="text-info border-bottom border-secondary pb-2 mb-3">📥 Production Dispatcher</h4>
+                    <form id="orderForm">
+                        <div class="mb-3">
+                            <label for="productTitle" class="form-label text-light">Product Name / Work Order</label>
+                            <input type="text" class="form-control bg-dark text-light border-secondary" id="productTitle" placeholder="e.g., AGV Follower Bearing" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="productDesc" class="form-label text-light">Batch & Specification Notes</label>
+                            <textarea class="form-control bg-dark text-light border-secondary" id="productDesc" rows="3" placeholder="Enter engineering requirements..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-info w-100 font-weight-bold text-dark mt-2">🚀 Dispatch Order & Start Production</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-lg-8">
+                <div class="card p-4 text-light shadow h-100" style="background-color: #1e222d !important; border: 1px solid #2d3344;">
+                    <div class="d-flex justify-content-between align-items-center border-bottom border-secondary pb-2 mb-3">
+                        <h4 class="text-info mb-0">📊 Real-Time Production Routing Status</h4>
+                        <button class="btn btn-sm btn-outline-info" id="refreshBtn">🔄 Refresh Dashboard</button>
+                    </div>
+                    
+                    <div class="row row-cols-1 row-cols-md-2 g-3" id="productsContainer">
+                        <div class="col-12 text-center text-muted py-5">
+                            <p>No active workpieces on line. Please dispatch an order from the console...</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
