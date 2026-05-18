@@ -18,5 +18,6 @@ The compiled 3D simulation executable is hosted on Itch.io for quick evaluation:
 3. Assembly Station  --> Component mating & assembly verification tracking(Manual OR Unity Trigger).
 4. Dashboard KPI -->>Live re-calculation of First Pass Yield (FPY)% / Scrap Log.
    
-
+## The Workpiece Life-Cycle & Dual Testing Modes
+The system tracks a sequential industrial production loop. You can test this entire pipeline using either **Mode A (Pure Web/Manual)** or **Mode B (Hybrid/Digital Twin)**:
 
