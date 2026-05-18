@@ -19,6 +19,11 @@ export default async function updateProductController(req, res) {
         if (!updated) {
             return res.status(404).json({ error: "Not Found", message: "could not find product" });
         }
+
+        if (req.app.get('broadcast')) {
+            req.app.get('broadcast')();
+        }
+
         
         res.json({
             message: "📢 successful in real time!",

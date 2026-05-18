@@ -1,50 +1,210 @@
 [
   {
-    "id": 1778967908853,
-    "productCode": "SN-1778967908853",
-    "title": "product1",
-    "description": "machine",
+    "id": 1779063822114,
+    "productCode": "SN-1779063822114",
+    "title": "Pill",
+    "description": "Batch A",
     "stations": {
       "sortingStation": "Completed"
     },
     "inspection": {
       "visualInspected": true,
-      "measuredValue": 39.93,
-      "isQualified": false,
-      "defectType": "Scratch(Surface Marring)"
-    },
-    "timestamp": "2026-05-16 21:45:08"
-  },
-  {
-    "id": 1778967926639,
-    "productCode": "SN-1778967926639",
-    "title": "product 2",
-    "description": "ddd",
-    "stations": {
-      "sortingStation": "Completed"
-    },
-    "inspection": {
-      "visualInspected": true,
-      "measuredValue": 39.97,
+      "measuredValue": 40.04,
       "isQualified": true,
       "defectType": "None"
     },
-    "timestamp": "2026-05-16 21:45:26"
+    "timestamp": "2026-05-18 00:23:42"
   },
   {
-    "id": 1778968335231,
-    "productCode": "SN-1778968335231",
-    "title": "d",
-    "description": "d",
+    "id": 1779063823189,
+    "productCode": "SN-1779063823189",
+    "title": "Pill",
+    "description": "Batch A",
     "stations": {
       "sortingStation": "Completed"
     },
     "inspection": {
       "visualInspected": true,
-      "measuredValue": 40.1,
-      "isQualified": false,
-      "defectType": "SizeError(Out of Tolerance)"
+      "measuredValue": 40.04,
+      "isQualified": true,
+      "defectType": "None"
     },
-    "timestamp": "2026-05-16 21:52:15"
+    "timestamp": "2026-05-18 00:23:43"
+  },
+  {
+    "id": 1779063823421,
+    "productCode": "SN-1779063823421",
+    "title": "Pill",
+    "description": "Batch A",
+    "stations": {
+      "sortingStation": "Completed"
+    },
+    "inspection": {
+      "visualInspected": true,
+      "measuredValue": 40.04,
+      "isQualified": true,
+      "defectType": "None"
+    },
+    "timestamp": "2026-05-18 00:23:43"
+  },
+  {
+    "id": 1779063823722,
+    "productCode": "SN-1779063823722",
+    "title": "Pill",
+    "description": "Batch A",
+    "stations": {
+      "sortingStation": "Completed"
+    },
+    "inspection": {
+      "visualInspected": true,
+      "measuredValue": 40.04,
+      "isQualified": true,
+      "defectType": "None"
+    },
+    "timestamp": "2026-05-18 00:23:43"
+  },
+  {
+    "id": 1779063823973,
+    "productCode": "SN-1779063823973",
+    "title": "Pill",
+    "description": "Batch A",
+    "stations": {
+      "sortingStation": "Completed"
+    },
+    "inspection": {
+      "visualInspected": true,
+      "measuredValue": 40.04,
+      "isQualified": true,
+      "defectType": "None"
+    },
+    "timestamp": "2026-05-18 00:23:43"
+  },
+  {
+    "id": 1779063824237,
+    "productCode": "SN-1779063824237",
+    "title": "Pill",
+    "description": "Batch A",
+    "stations": {
+      "sortingStation": "Completed"
+    },
+    "inspection": {
+      "visualInspected": true,
+      "measuredValue": 40.04,
+      "isQualified": true,
+      "defectType": "None"
+    },
+    "timestamp": "2026-05-18 00:23:44"
+  },
+  {
+    "id": 1779063824522,
+    "productCode": "SN-1779063824522",
+    "title": "Pill",
+    "description": "Batch A",
+    "stations": {
+      "sortingStation": "Completed"
+    },
+    "inspection": {
+      "visualInspected": true,
+      "measuredValue": 40.04,
+      "isQualified": true,
+      "defectType": "None"
+    },
+    "timestamp": "2026-05-18 00:23:44"
+  },
+  {
+    "id": 1779063825104,
+    "productCode": "SN-1779063825104",
+    "title": "Pill",
+    "description": "Batch A",
+    "stations": {
+      "sortingStation": "Completed"
+    },
+    "inspection": {
+      "visualInspected": true,
+      "measuredValue": 40.04,
+      "isQualified": true,
+      "defectType": "None"
+    },
+    "timestamp": "2026-05-18 00:23:45"
+  },
+  {
+    "id": 1779063826040,
+    "productCode": "SN-1779063826040",
+    "title": "Pill",
+    "description": "Batch A",
+    "stations": {
+      "sortingStation": "Completed"
+    },
+    "inspection": {
+      "visualInspected": true,
+      "measuredValue": 40.04,
+      "isQualified": true,
+      "defectType": "None"
+    },
+    "timestamp": "2026-05-18 00:23:46"
+  },
+  {
+    "id": 1779063826372,
+    "productCode": "SN-1779063826372",
+    "title": "Pill",
+    "description": "Batch A",
+    "stations": {
+      "sortingStation": "Completed"
+    },
+    "inspection": {
+      "visualInspected": true,
+      "measuredValue": 40.04,
+      "isQualified": true,
+      "defectType": "None"
+    },
+    "timestamp": "2026-05-18 00:23:46"
+  },
+  {
+    "id": 1779063826694,
+    "productCode": "SN-1779063826694",
+    "title": "Pill",
+    "description": "Batch A",
+    "stations": {
+      "sortingStation": "Completed"
+    },
+    "inspection": {
+      "visualInspected": true,
+      "measuredValue": 40.04,
+      "isQualified": true,
+      "defectType": "None"
+    },
+    "timestamp": "2026-05-18 00:23:46"
+  },
+  {
+    "id": 1779063827021,
+    "productCode": "SN-1779063827021",
+    "title": "Pill",
+    "description": "Batch A",
+    "stations": {
+      "sortingStation": "Completed"
+    },
+    "inspection": {
+      "visualInspected": true,
+      "measuredValue": 40.04,
+      "isQualified": true,
+      "defectType": "None"
+    },
+    "timestamp": "2026-05-18 00:23:47"
+  },
+  {
+    "id": 1779063827820,
+    "productCode": "SN-1779063827820",
+    "title": "Pill",
+    "description": "Batch A",
+    "stations": {
+      "sortingStation": "Completed"
+    },
+    "inspection": {
+      "visualInspected": true,
+      "measuredValue": 40.04,
+      "isQualified": true,
+      "defectType": "None"
+    },
+    "timestamp": "2026-05-18 00:23:47"
   }
 ]

@@ -1,3 +1,5 @@
+
+
 // Base API endpoint URL connected to the Node.js backend
 const API_URL = 'http://localhost:5000/api/products';
 
@@ -243,3 +245,37 @@ async function handleDeleteProduct(id) {
         console.error("Failed to scrap workpiece item:", error);
     }
 }
+window.handleDeleteProduct = handleDeleteProduct; // Expose to global scope for inline onclick access in generated cardss
+window.handlePostProduct = handlePostProduct;
+window.simulateStation = simulateStation;              
+window.simulateCameraInspection = simulateCameraInspection;
+
+
+
+
+(function initLiveTelemetry() {
+    const socket = new WebSocket('ws://localhost:5000');
+    socket.onopen = () => console.log("📡 WebSocket connection established for live telemetry!");
+    
+    socket.onmessage = (event) => {
+        if (event.data === 'REFRESH_DASHBOARD') {
+            console.log("🔄 Received dashboard refresh signal via WebSocket");
+            if (typeof fetchProducts === 'function') {
+                fetchProducts(); // Trigger real-time dashboard update on receiving broadcast
+            }else if(typeof loadProducts === 'function'){
+                loadProducts(); // Fallback for initial data loading if fetchProducts is not defined yet
+            }else if(typeof getProducts==='function'){
+                getProducts(); // Ultimate fallback to ensure data sync if other methods are not available
+            }else{
+                console.warn("No valid data fetching method found to refresh dashboard!");
+            }
+
+        }
+    };
+    socket.onclose = () => 
+    {
+        console.warn("⚠️ WebSocket connection closed. Real-time updates will be unavailable.");
+    setTimeout(initLiveTelemetry,3000); // Attempt reconnection every 3 seconds if connection drops
+    };
+})();
+
